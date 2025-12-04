@@ -3,50 +3,31 @@
 body{
     font-family: 'Roboto Mono', monospace;
 }
-.header .container {
-  max-width: 1200px;
+.container {
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 20px;
 }
-.headerwrapper .topstrip{padding: 10px 0px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    position: relative;
-    overflow: hidden;}
-.headerwrapper .topstrip::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-    background-size: 20px 20px;
-    animation: moveBackground 20s linear infinite;
-}
-.headerwrapper .topstrip p {
-    font-size: 14px;
-    color: #fff;
-    font-weight: 500;
-    text-align: center;
-    letter-spacing: 0.5px;
-    position: relative;
-    z-index: 1;
-}
-.headerwrapper .header {
-    width: 100%;
+.header {
     padding: 20px 0;
     background: #ffffff;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: var(--shadow-md);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: all 0.3s ease;
+}
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
 }
 .logowrapper {
     display: flex;
     align-items: center;
 }
 .logowrapper img {
-    max-width: 100px; 
+    max-width: 60px; 
     height: auto;
     transition: transform 0.3s ease;
 }
@@ -55,45 +36,82 @@ body{
     transform: scale(1.05);
 }
 header .headerSearch {
-    width: 70%; /* Increased from 60% */
-    max-width: 800px;
-    height: 56px;
-    background: #f8f9fa;
-    padding: 0;
+    width: 60%; 
+    max-width: 600px;
+    height: 60px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    background: #f6f6f6;
+    padding: 14px;
+    border-radius: radius-lg;
     position: relative;
-    border-radius: 28px;
-    border: 2px solid transparent;
+    overflow: hidden;
+    border: 1px solid transparent;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+   
 }
 header .headerSearch input {
-    width: 85%; /* Increased from 80% */
-    height: 100%;
-    border: none;
-    border-radius: 28px 0 0 28px;
-    font-size: 15px;
-    color: #2d3748;
-    background: transparent !important;
+    border: 0px !important;
+    flex: 1;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.8);
+    background: lightgray;
     outline: none !important;
-    padding: 0 30px;
+    padding: 8px 12px 8px 36px;
     font-weight: 400;
-}
-header .headerSearch:focus-within {
-    border-color: #667eea;
-    background: #ffffff;
-    box-shadow: 0 6px 25px rgba(102, 126, 234, 0.15);
-    transform: translateY(-2px);
-}
-header .headerSearch button {
-    width: 80%;
-    height: 50px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-    font-size: 14px;
-    color:rgba(red, green, blue, alpha);
-    background: transparent !important;
-    outline: none !important;
-    padding: 0px 25px;
-    border: none !important;
+    border: 0px !important;
+    transition: all 0.3s ease;
 }
 
+header .headerSearch button {
+    position:absolute;
+    left: 15px;
+    top: 10px;
+    z-index: 100;
+    min-width: 40px;
+    height: 40px;
+    width: 100%;
+    border-radius: 50%;
+    color: #000;
+
+}
+header .headerSearch button svg{
+    font-size: 20px;
+
+}
+header .circle{
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 45px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+header .circle svg{
+    font-size: 22px;
+}
+header .heart{
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 45px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #000;
+}
+
+
+header .cart{
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 45px;
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #000;
+}
