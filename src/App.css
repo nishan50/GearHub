@@ -1,117 +1,33 @@
+/* src/App.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
-*{margin:0px; padding:0px; box-sizing: border-box;}
-body{
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
     font-family: 'Roboto Mono', monospace;
-}
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-.header {
-    padding: 20px 0;
-    background: #ffffff;
-    box-shadow: var(--shadow-md);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-.header-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-}
-.logowrapper {
-    display: flex;
-    align-items: center;
-}
-.logowrapper img {
-    max-width: 60px; 
-    height: auto;
-    transition: transform 0.3s ease;
+  }
 }
 
-.logowrapper a:hover img {
-    transform: scale(1.05);
-}
-header .headerSearch {
-    width: 60%; 
-    max-width: 600px;
-    height: 60px;
-    display: flex;
-    flex: 1;
-    align-items: center;
-    background: #f6f6f6;
-    padding: 14px;
-    border-radius: radius-lg;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid transparent;
-    transition: all 0.3s ease;
-   
-}
-header .headerSearch input {
-    border: 0px !important;
-    flex: 1;
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.8);
-    background: lightgray;
-    outline: none !important;
-    padding: 8px 12px 8px 36px;
-    font-weight: 400;
-    border: 0px !important;
-    transition: all 0.3s ease;
-}
-
-header .headerSearch button {
-    position:absolute;
-    left: 15px;
-    top: 10px;
-    z-index: 100;
-    min-width: 40px;
-    height: 40px;
-    width: 100%;
-    border-radius: 50%;
-    color: #000;
-
-}
-header .headerSearch button svg{
-    font-size: 20px;
-
-}
-header .circle{
-    align-items: center;
-    justify-content: center;
-    min-width: 50px;
-    height: 45px;
-    width: 50px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #000;
-}
-header .circle svg{
-    font-size: 22px;
-}
-header .heart{
-    align-items: center;
-    justify-content: center;
-    min-width: 50px;
-    height: 45px;
-    width: 50px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #000;
-}
-
-
-header .cart{
-    align-items: center;
-    justify-content: center;
-    min-width: 50px;
-    height: 45px;
-    width: 50px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    color: #000;
+/* Custom utility classes */
+@layer components {
+  .custom-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200;
+  }
+  
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-200 text-gray-800 rounded-lg hover:bg-gray-300 transition-colors duration-200;
+  }
 }

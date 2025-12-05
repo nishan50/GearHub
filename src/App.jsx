@@ -1,4 +1,4 @@
-import "bootstrap/dist/css/bootstrap.min.css";
+
 import './App.css';
 import { BrowserRouter, Route, Router ,Routes} from "react-router-dom";
 import Home from "./pages/Home";
@@ -6,13 +6,18 @@ import Header from "./components/Header";
 function App() {
     return (
         <BrowserRouter>
-        <Header/>
-        <Routes>
-            <Route path="/" exact={true} element={<Home/>} />
-        </Routes>  
+            <div className="min-h-screen bg-gray-50">
+                <Header />
+                <main className="py-8">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                    </Routes>
+                </main>
+            </div>
         </BrowserRouter>
-        
     );
-}   
+}
+
+       
 
 export default App;
